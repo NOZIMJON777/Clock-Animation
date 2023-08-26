@@ -1,0 +1,102 @@
+body{
+    background-image: url(./clock\ image\ no\ hand.png);
+    background-repeat: no-repeat ;
+    background-position: center;
+    background-size: contain; 
+}
+
+button{
+   position: relative;
+  
+   padding: 15px 20px;
+   border-radius: 20px;
+   background-color: aqua;
+   border: none;
+   font-weight: 600;
+   overflow: hidden;
+   text-transform: capitalize;
+   font-size: large;
+   cursor: pointer;
+   transition: all;
+   transition-duration: 1s ;
+   transition-timing-function: ease-in-out;
+}
+
+button:hover {
+    width:300px;
+}
+.clock{
+    height: 250px;
+    width: 250px;
+    border-radius: 100%;
+    margin: 200px auto;
+
+    position: relative;
+    display: flex;
+    align-items:center;
+    justify-content: center;   
+   
+}
+
+
+.hand {
+  position: absolute;
+  top:50%;
+  width:400px;
+  height:10px;
+  transform: rotate(270deg);
+
+ 
+  animation-name: hand;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes hand{
+    from{
+         transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+} 
+
+
+.minute{
+    position: absolute;
+    top:50%;
+    width:200px;
+    height:5px;
+    transform: rotate(270deg);
+    
+    
+    animation-name: minute;
+    animation-timing-function: ease-in-out;
+    animation-duration: 50s;
+    animation-iteration-count: infinite;
+}
+@keyframes minute{
+    from{
+        transform: rotate(0deg);
+   }
+   to{
+       transform: rotate(360deg);
+       transform: ;
+   }
+}
+  .hour:hover{
+  animation-play-state: paused;
+}
+
+.hand {
+    background: linear-gradient(to right, 
+     rgba(255,0,0,0) 0%, rgba(255,0,0,0) 30%, 
+      black 30%,  black 100%);
+  }
+  .minute {
+    background: linear-gradient(to right, 
+     rgba(255,0,0,0) 0%, rgba(255,0,0,0) 10%,
+       black 10%,  black 100%);
+  }
+
